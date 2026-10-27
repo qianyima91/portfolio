@@ -2,13 +2,17 @@
 
 静态HTML、CSS、JavaScript作品集。GitHub保存网站源码，GitHub Pages提供公开访问；面试官访问不需要本机开机或启动服务。
 
+- 公开网站：https://qianyima91.github.io/portfolio/
+- 源码仓库：https://github.com/qianyima91/portfolio
+- 发布状态：https://github.com/qianyima91/portfolio/actions
+
 ## 本地编辑
 
 双击`启动网站.cmd`，访问 http://127.0.0.1:4173/admin/ 。修改文字、字体、图片、PDF和摄影排序后，点击“保存到网站”。原内容自动备份在`docs/backups/`。
 
 ## 更新公开网站
 
-首次连接仓库并启用Pages后，双击`发布网站.cmd`。它会核对素材、构建公开版本、提交修改并推送GitHub。仓库Actions里的`Publish portfolio`显示绿色后，公开网址即更新。
+仓库和Pages已于2026-10-27接通。双击`发布网站.cmd`，它会核对素材、构建公开版本、提交修改并推送GitHub。仓库Actions里的`Publish portfolio`显示绿色后，公开网址即更新。
 
 本地编辑的“保存”仅写入本机。公开网址用于展示，不提供本地编辑接口；目前仍需在本机编辑后发布。GitHub登录由Git凭据管理器处理，不在代码中保存密码或密钥。
 
