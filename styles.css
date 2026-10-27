@@ -25,3 +25,4 @@
 .photography-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.photography-grid>.photo{min-width:0}
 @media(max-width:760px){.hero-info{left:14px;bottom:44px;max-width:none;width:calc(100% - 28px);height:110px;padding:42px 20px 0;border-radius:0 0 32px 32px;overflow:hidden}.hero-info:before{inset:0;border-radius:0;background:linear-gradient(transparent,#8e64c8dc 35%,#8e64c8 70%)}}
 @media(max-width:380px){.photography-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.photo:last-child{display:flex}}
+.media-item img{height:auto}

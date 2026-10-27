@@ -11,5 +11,8 @@
     "build": "node scripts/build.mjs --public",
     "verify:build": "node scripts/verify-build.mjs",
     "publish": "node scripts/publish.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.35.5"
   }
 }

@@ -1,5 +1,7 @@
 import { applyHeroAppearance } from './appearance.js';
 import { renderPhotoCarousel, mountPhotoCarousel } from './assets/photo-carousel.js';
+import {configureImages,imageAttributes,fullImageUrl,installImageRetries} from './assets/images.js';
+installImageRetries();
 const main = document.querySelector('#main');
 let data;
 let localEditor = false;
@@ -79,7 +81,7 @@ function renderMedia(item) {
   const url = validUrl(item.url);
   if (!src && !url) return placeholder(item.label);
   if (item.kind === 'video' && src) return `<figure class="media-item"><video src="${e(src)}" controls preload="metadata" playsinline></video><figcaption>${e(item.label)}</figcaption></figure>`;
-  if (src) return `<figure class="media-item"><button class="image-button" type="button" data-image="${e(src)}" data-caption="${e(item.label)}"><img src="${e(src)}" loading="lazy" alt="${e(item.label)}"><span class="image-expand">↗</span></button><figcaption>${e(item.label)}</figcaption>${url ? link(url,'查看完整材料','text-link') : ''}</figure>`;
+  if (src) return `<figure class="media-item"><button class="image-button" type="button" data-image="${e(src)}" data-caption="${e(item.label)}"><img ${imageAttributes(src,'(max-width: 700px) 92vw, 40vw')} alt="${e(item.label)}"><span class="image-expand">↗</span></button><figcaption>${e(item.label)}</figcaption>${url ? link(url,'查看完整材料','text-link') : ''}</figure>`;
   return `<div class="material-link">${mediaIcon}${link(url,item.label,'text-link')}</div>`;
 }
 function metrics(items) {
@@ -114,7 +116,7 @@ function workCards() {
           ? `<a class="work-pdf-link is-empty" href="admin/?tab=works&work=${encodeURIComponent(w.id)}" target="_blank" rel="noopener">${pdfIcon}<span>上传PDF作品集</span></a>`
           : `<span class="work-pdf-link is-empty">${pdfIcon}<span>PDF作品集待上传</span></span>`
         : '';
-    return `<article class="work-card"><div class="work-cover work-cover-${index%4}">${cover?`<button class="image-button" type="button" data-image="${e(cover)}" data-caption="${e(w.title)}"><img src="${e(cover)}" alt="${e(w.title)}封面" loading="lazy"></button>`:`<div class="work-empty"><span>0${index+1}</span>${mediaIcon}<small>待添加作品封面</small></div>`}</div><div class="work-meta"><span>${e(w.category)}</span><time>${e(w.date|| (draft()?'日期待补':''))}</time></div><h3>${e(w.title)}</h3>${w.description?`<p class="work-description">${e(w.description)}</p>`:''}${w.contribution?`<p class="work-contribution"><span>本人贡献</span>${e(w.contribution)}</p>`:''}<div class="work-actions">${url?link(url,'播放 / 体验','text-link'):draft()?'<span class="pending-label">作品入口待接入</span>':''}${pdfAction}</div></article>`;
+    return `<article class="work-card"><div class="work-cover work-cover-${index%4}">${cover?`<button class="image-button" type="button" data-image="${e(cover)}" data-caption="${e(w.title)}"><img ${imageAttributes(cover,'(max-width: 700px) 92vw, 46vw')} alt="${e(w.title)}封面"></button>`:`<div class="work-empty"><span>0${index+1}</span>${mediaIcon}<small>待添加作品封面</small></div>`}</div><div class="work-meta"><span>${e(w.category)}</span><time>${e(w.date|| (draft()?'日期待补':''))}</time></div><h3>${e(w.title)}</h3>${w.description?`<p class="work-description">${e(w.description)}</p>`:''}${w.contribution?`<p class="work-contribution"><span>本人贡献</span>${e(w.contribution)}</p>`:''}<div class="work-actions">${url?link(url,'播放 / 体验','text-link'):draft()?'<span class="pending-label">作品入口待接入</span>':''}${pdfAction}</div></article>`;
   }).join('')}</div>`;
 }
 function photographyHtml() {
@@ -163,7 +165,7 @@ document.addEventListener('click',event=>{
   const scrollButton=event.target.closest('[data-scroll]');
   if(scrollButton){document.getElementById(scrollButton.dataset.scroll)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});document.querySelectorAll('.case-nav button').forEach(b=>b.classList.toggle('active',b===scrollButton));}
   const imageButton=event.target.closest('[data-image]');
-  if(imageButton){const dialog=document.querySelector('#media-dialog');document.querySelector('#dialog-content').innerHTML=`<img src="${e(imageButton.dataset.image)}" alt="${e(imageButton.dataset.caption)}"><p>${e(imageButton.dataset.caption)}</p>`;dialog.showModal();}
+  if(imageButton){const dialog=document.querySelector('#media-dialog');document.querySelector('#dialog-content').innerHTML=`<img src="${e(fullImageUrl(imageButton.dataset.image))}" decoding="async" alt="${e(imageButton.dataset.caption)}"><p>${e(imageButton.dataset.caption)}</p>`;dialog.showModal();}
 });
 const dialog=document.querySelector('#media-dialog');
 dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
@@ -176,6 +178,7 @@ try {
   if(!response.ok)throw new Error('内容读取失败');
   data=await response.json();
   if(['127.0.0.1','localhost'].includes(location.hostname))try{const status=await fetch('api/status');if(status.ok)localEditor=(await status.json()).editor===true;}catch{}
+  if(!localEditor){const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),10000);try{const manifest=await fetch('content/images.json',{cache:'no-cache',signal:controller.signal});if(manifest.ok)configureImages(await manifest.json());}catch{}finally{clearTimeout(timeout);}}
   route();footer();
   if(localEditor && window.parent !== window)window.parent.postMessage({type:'portfolio-preview-ready'},location.origin);
   if((localEditor && !publicView) || draft()){

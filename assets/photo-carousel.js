@@ -1,3 +1,4 @@
+import {imageAttributes} from './images.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const chevron = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
@@ -6,7 +7,7 @@ export function renderPhotoCarousel(photos) {
   return `<div class="photo-carousel" data-photo-carousel tabindex="0" role="region" aria-roledescription="轮播图" aria-label="摄影作品">
     <div class="photo-stage" data-photo-stage>
       <div class="photo-floor" aria-hidden="true"></div>
-      ${photos.map((photo,index) => `<button class="photo-card" type="button" data-photo-index="${index}" data-photo-src="${escape(photo.src)}" data-photo-caption="${escape(photo.caption)}" aria-label="查看第${index+1}张摄影作品"><img src="${escape(photo.src)}" alt="${escape(photo.caption || `摄影作品 ${index+1}`)}" loading="lazy" decoding="async" draggable="false"><span class="photo-card-shade" aria-hidden="true"></span></button>`).join('')}
+      ${photos.map((photo,index) => `<button class="photo-card" type="button" data-photo-index="${index}" data-photo-src="${escape(photo.src)}" data-photo-caption="${escape(photo.caption)}" aria-label="查看第${index+1}张摄影作品"><img ${imageAttributes(photo.src,'(max-width: 700px) 84vw, 66vw')} alt="${escape(photo.caption || `摄影作品 ${index+1}`)}" draggable="false"><span class="photo-card-shade" aria-hidden="true"></span></button>`).join('')}
       <button class="photo-arrow photo-prev" type="button" data-photo-step="-1" aria-label="上一张摄影作品" ${multiple?'':'hidden'}>${chevron}</button>
       <button class="photo-arrow photo-next" type="button" data-photo-step="1" aria-label="下一张摄影作品" ${multiple?'':'hidden'}>${chevron}</button>
     </div>

@@ -27,6 +27,8 @@ jobs:
           node-version: '24'
       - name: Check source
         run: node scripts/check.mjs
+      - name: Install image build dependency
+        run: npm ci --ignore-scripts
       - name: Build public website
         run: node scripts/build.mjs --public
       - name: Verify published files

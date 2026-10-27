@@ -8,7 +8,7 @@
 
 ## 本地编辑
 
-双击`启动网站.cmd`，访问 http://127.0.0.1:4173/admin/ 。修改文字、字体、图片、PDF和摄影排序后，点击“保存到网站”。原内容自动备份在`docs/backups/`。
+双击`编辑作品集.cmd`，会自动启动本地服务并打开 http://127.0.0.1:4173/admin/ 。修改文字、字体、图片、PDF和摄影排序后，点击“保存到网站”。原内容自动备份在`docs/backups/`。也可继续使用`启动网站.cmd`。
 
 ## 更新公开网站
 
@@ -18,7 +18,7 @@
 
 ## 开发命令
 
-需要Node.js 24和Git，不需要安装npm依赖。
+需要Node.js 24和Git。首次克隆后运行`npm ci --ignore-scripts`安装锁定的图片构建依赖（sharp）；当前电脑已安装。
 
 ```sh
 npm start
@@ -28,7 +28,7 @@ npm run verify:build
 npm run publish
 ```
 
-`content/site.json`管理文案和样式；`assets/`存放展示素材；`scripts/server.mjs`提供仅本机可用的编辑服务。`dist/`为生成文件。公开构建仅复制当前使用的素材，隐藏缺失材料占位，不包含编辑后台、备份或原始人物源图。
+`content/site.json`管理文案和样式；`assets/`存放展示素材；`scripts/server.mjs`提供仅本机可用的编辑服务。`dist/`为生成文件。公开构建复制当前使用的素材，生成480/960/1600像素WebP预览和最大2400像素放大版本，按屏幕宽度选择；原图保留，不裁切或覆盖。生成缓存位于忽略的`tmp/image-cache/`，新上传图片下次发布自动优化。隐藏缺失材料占位，不包含编辑后台、备份或原始人物源图。
 
 ## GitHub Pages首次设置
 
