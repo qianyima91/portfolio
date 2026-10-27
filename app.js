@@ -178,9 +178,9 @@ try {
   if(['127.0.0.1','localhost'].includes(location.hostname))try{const status=await fetch('api/status');if(status.ok)localEditor=(await status.json()).editor===true;}catch{}
   route();footer();
   if(localEditor && window.parent !== window)window.parent.postMessage({type:'portfolio-preview-ready'},location.origin);
-  if(draft()){
+  if((localEditor && !publicView) || draft()){
     const tools=document.querySelector('#preview-tools');tools.hidden=false;
-    tools.innerHTML=`<span class="preview-dot"></span><span>制作预览</span>${localEditor?'<a href="admin/" target="_blank" rel="noopener">编辑内容 ↗</a>':''}<a href="?view=public${e(location.hash||'#/')}" target="_blank" rel="noopener">查看公开效果 ↗</a>`;
+    tools.innerHTML=`<span class="preview-dot"></span><span>${localEditor?'本地编辑':'制作预览'}</span>${localEditor?'<a href="admin/" target="_blank" rel="noopener">编辑内容 ↗</a>':''}<a href="?view=public${e(location.hash||'#/')}" target="_blank" rel="noopener">查看公开效果 ↗</a>`;
   }
 } catch(error) {
   main.innerHTML='<div class="page-width not-found"><h1>内容暂时未能打开。</h1><p>请刷新页面重试。</p><button type="button" class="plain-button" onclick="location.reload()">重新加载</button></div>';
