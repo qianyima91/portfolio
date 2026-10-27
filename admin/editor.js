@@ -48,12 +48,12 @@ document.addEventListener('change',async event=>{
   const file=input.files[0];if(file.size>8*1024*1024){toast('图片上限8MB，请压缩后再上传。');return;}
   if(!available){toast('线上编辑连接尚未接通。');return;}
   toast('正在上传图片…');
-  try{const base64=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result).split(',')[1]);reader.onerror=reject;reader.readAsDataURL(file);});const res=await fetch('../api/upload',{method:'POST',headers:{'Content-Type':'application/json','X-Portfolio-Editor':'1'},body:JSON.stringify({type:file.type,data:base64})});const result=await res.json();if(!res.ok)throw new Error(result.error||'图片上传未完成');set(input.dataset.upload,result.src);const opened=[...document.querySelectorAll('details[open]')].map(n=>n.querySelector('summary')?.textContent);render();document.querySelectorAll('details').forEach(n=>{if(opened.includes(n.querySelector('summary')?.textContent))n.open=true;});toast('图片已加入，点击“保存到网站”应用修改。');}catch(error){toast(error.message);}
+  try{const base64=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result).split(',')[1]);reader.onerror=reject;reader.readAsDataURL(file);});const res=await fetch('../api/upload',{method:'POST',headers:{'Content-Type':'application/json','X-Portfolio-Editor':'1'},body:JSON.stringify({type:file.type,data:base64})});const result=await res.json();if(!res.ok)throw new Error(result.error||'图片上传未完成');set(input.dataset.upload,result.src);const opened=[...document.querySelectorAll('details[open]')].map(n=>n.querySelector('summary')?.textContent);render();document.querySelectorAll('details').forEach(n=>{if(opened.includes(n.querySelector('summary')?.textContent))n.open=true;});toast('图片已加入，点击“保存到本地”应用修改。');}catch(error){toast(error.message);}
 });
 saveButton.addEventListener('click',async()=>{
   if(saving||!available)return;
   saving=true;saveButton.disabled=true;saveButton.textContent='正在保存…';
-  try{const res=await fetch('../api/content',{method:'PUT',headers:{'Content-Type':'application/json','X-Portfolio-Editor':'1'},body:JSON.stringify(content)});const result=await res.json();if(!res.ok)throw new Error(result.error||'保存未完成');dirty=false;document.querySelector('#save-state').textContent=`已保存到本地 · ${new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})}`;toast('已保存到本地网站，刷新作品集即可查看。原内容已自动备份。');}catch(error){toast(error.message);saveButton.disabled=false;}finally{saving=false;saveButton.textContent='保存到网站';}
+  try{const res=await fetch('../api/content',{method:'PUT',headers:{'Content-Type':'application/json','X-Portfolio-Editor':'1'},body:JSON.stringify(content)});const result=await res.json();if(!res.ok)throw new Error(result.error||'保存未完成');dirty=false;document.querySelector('#save-state').textContent=`已保存到本地 · ${new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})}`;toast('已保存到本地并自动备份。线上更新还需双击“发布网站.cmd”，等待发布成功后刷新公开网址。');}catch(error){toast(error.message);saveButton.disabled=false;}finally{saving=false;saveButton.textContent='保存到本地';}
 });
 document.addEventListener('change',async event=>{
   const input=event.target;
@@ -68,7 +68,7 @@ document.addEventListener('change',async event=>{
     const response=await fetch('../api/upload-pdf',{method:'POST',headers:{'Content-Type':'application/json','X-Portfolio-Editor':'1'},body:JSON.stringify({type:'application/pdf',name:file.name,data:base64})});
     const result=await response.json();if(!response.ok)throw new Error(result.error||'PDF上传未完成');
     const index=Number(input.dataset.pdfUpload);set(`works.${index}.portfolioPdf`,result.src);set(`works.${index}.portfolioPdfName`,result.name);
-    const y=scrollY;render();scrollTo({top:y,behavior:'instant'});toast('PDF已上传，点击“保存到网站”后显示作品集入口。');
+    const y=scrollY;render();scrollTo({top:y,behavior:'instant'});toast('PDF已上传，点击“保存到本地”后显示作品集入口。');
   }catch(error){input.disabled=false;input.value='';toast(error.message);}
 });
 addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue='';}});
@@ -76,8 +76,8 @@ try{
   if(!['127.0.0.1','localhost'].includes(location.hostname))throw new Error('offline');
   const status=await fetch('../api/status');if(!status.ok)throw new Error('offline');const result=await status.json();if(!result.editor)throw new Error('offline');available=true;
   const response=await fetch('../api/content',{cache:'no-store'});if(!response.ok)throw new Error('read');content=await response.json();content.appearance=normalizeAppearance(content.appearance);content.heroStats??=[];
-  document.querySelector('#save-state').textContent='已连接本地网站';document.querySelector('#editor-tip').textContent='在这里直接修改网站内容并保存。内容会写入本地网站文件，保存前自动备份；线上账号与发布等待GitHub仓库接入。';render();
+  document.querySelector('#save-state').textContent='已连接本地网站';document.querySelector('#editor-tip').textContent='修改后先“保存到本地”，再双击网站文件夹中的“发布网站.cmd”。等待发布进度显示绿色成功后，刷新线上作品集。本地保存会自动备份，不会直接更新线上。';render();
   if(tab==='works'&&editParams.get('work'))document.getElementById(`edit-work-${editParams.get('work')}`)?.scrollIntoView({block:'start'});
 }catch{
-  document.querySelector('#save-state').textContent='线上编辑尚未连接';document.querySelector('#editor-tip').textContent='展示网站已可浏览；编辑服务需连接你的网站仓库与登录权限。';main.innerHTML='<div class="help-empty"><h1>线上编辑将在仓库接入后启用。</h1><p>当前是作品集预览，GitHub仓库和编辑登录尚未连接。</p><p>在电脑上启动本地网站后，可以打开同一编辑页直接保存文字和图片。</p><a href="../#/">返回作品集 ↗</a></div>';
+  document.querySelector('#save-state').textContent='本地编辑服务未连接';document.querySelector('#editor-tip').textContent='请在本机双击“编辑作品集.cmd”启动编辑器。公开网址只展示作品。';main.innerHTML='<div class="help-empty"><h1>请先启动本地编辑器。</h1><p>GitHub与公开网站已接通，编辑器仍在本机运行。</p><p>双击“编辑作品集.cmd”后打开本页，修改并保存，再运行“发布网站.cmd”更新公开网站。</p><a href="../#/">返回作品集 ↗</a></div>';
 }
