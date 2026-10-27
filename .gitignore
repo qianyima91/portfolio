@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.env*
+!.env.example
+docs/backups/
+tmp/
+*.log
+.DS_Store
+Thumbs.db
+.openai/.local/
+.openai/
+docs/*.jpg
+docs/*.png
+assets/character-source.png
+
+# Unused historical uploads stay on this computer.
+assets/uploads/1793011679214-88948cde.png
+assets/uploads/1793013056104-964ec5f0.png
+assets/uploads/1793013908885-b1ff3e96.jpg
+assets/uploads/1793014143478-bc046fc8.jpg
+assets/uploads/1793014589936-d7b283a4.jpg
+assets/uploads/1793020880657-f86bd175.png
+assets/uploads/1793020896946-5a2a111f.png

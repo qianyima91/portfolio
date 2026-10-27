@@ -1,0 +1,674 @@
+{
+  "schemaVersion": 1,
+  "settings": {
+    "showPlaceholders": false
+  },
+  "appearance": {
+    "name": {
+      "font": "modern",
+      "size": 147,
+      "mobileSize": 58,
+      "weight": 800,
+      "letterSpacing": 4,
+      "lineHeight": 1.15,
+      "color": "#17141f",
+      "slant": 0
+    },
+    "role": {
+      "font": "modern",
+      "size": 56,
+      "mobileSize": 30,
+      "weight": 700,
+      "letterSpacing": 0.5,
+      "lineHeight": 1,
+      "color": "#8056c5",
+      "slant": 0
+    },
+    "english": {
+      "font": "clean",
+      "size": 15,
+      "mobileSize": 8,
+      "weight": 600,
+      "letterSpacing": 7.5,
+      "lineHeight": 2.2,
+      "color": "#a4a0ac",
+      "slant": 0
+    },
+    "identity": {
+      "font": "modern",
+      "size": 24,
+      "mobileSize": 14,
+      "weight": 600,
+      "letterSpacing": 0,
+      "lineHeight": 1.8,
+      "color": "#ffffff",
+      "slant": 0
+    },
+    "keywords": {
+      "font": "modern",
+      "size": 20,
+      "mobileSize": 13,
+      "weight": 500,
+      "letterSpacing": 0,
+      "lineHeight": 1.6,
+      "color": "#ffffff",
+      "slant": 0
+    },
+    "layout": {
+      "left": 5.5,
+      "titleTop": 48,
+      "titleGap": 40,
+      "englishGap": 8,
+      "infoBottom": 84,
+      "infoGap": 15
+    }
+  },
+  "heroStats": [
+    {
+      "value": "2400+",
+      "label": "开发者社群",
+      "detail": "累计覆盖人数"
+    },
+    {
+      "value": "6个",
+      "label": "技术内容渠道",
+      "detail": "独立运营账号"
+    },
+    {
+      "value": "82.8万",
+      "label": "AI特效模块",
+      "detail": "5—7月平台累计调用"
+    },
+    {
+      "value": "2.5h→35min",
+      "label": "单篇图文内容",
+      "detail": "自建AI工作台提效4.3倍"
+    }
+  ],
+  "profile": {
+    "name": "马倩怡",
+    "role": "求职方向：产品运营",
+    "identity": "哈尔滨工业大学 · 数字媒体技术 · 28届硕士在读",
+    "keywords": [
+      "AI产品运营",
+      "商业化增长",
+      "AI应用提效"
+    ],
+    "bio": "我是马倩怡，哈尔滨工业大学数字媒体技术专业28届硕士在读。我的经历围绕AI产品运营、商业化增长与AI应用展开，也持续通过AI创作和摄影探索内容表达。",
+    "email": "m15399259570@163.com",
+    "resumeUrl": "",
+    "englishRole": "Career Objective: Product Operations"
+  },
+  "education": [
+    {
+      "school": "哈尔滨工业大学",
+      "major": "数字媒体技术",
+      "degree": "硕士",
+      "period": "2025.09—2028.06"
+    },
+    {
+      "school": "哈尔滨工业大学",
+      "major": "数字媒体艺术",
+      "degree": "本科",
+      "period": "2021.09—2025.06"
+    }
+  ],
+  "honors": [
+    "研究生特等奖学金",
+    "国家级：第16届大广赛【短视频类】二等奖、三等奖及优秀奖",
+    "国家级：第15届大广赛【UI类】全国三等奖",
+    "国家级：第3届光年奖数字艺术创意大赛入围复赛",
+    "省级：第12届未来设计师·全国高校数字艺术设计大赛【游戏类】一等奖",
+    "省级：中国好创意暨全国数字艺术设计大赛【产品类】二等奖",
+    "省级：2024年中国大学生计算机设计大赛【游戏类】三等奖",
+    "省级：第15届全国大学生广告艺术大赛【短视频类】二等奖及优秀奖"
+  ],
+  "experiences": [
+    {
+      "id": "shengshu",
+      "kind": "internship",
+      "name": "生数科技",
+      "role": "产品运营",
+      "period": "2026.03—2026.07",
+      "summary": "产品推广 · 增长运营 · 活动策划 · 官网优化",
+      "intro": "围绕Vidu MaaS/API开放平台，参与B端产品推广、开发者生态运营、商业化增长及产品体验优化。",
+      "context": "生数科技是国内AI视频生成领域的头部独角兽企业，旗下Vidu MaaS开放平台面向企业与开发者，提供AI视频、图像生成能力的API接入。",
+      "modules": [
+        {
+          "id": "promotion",
+          "title": "产品推广",
+          "description": "围绕泛互联网、AI剧与广告营销三类用户，整理产品能力与应用场景，通过解决方案、特效和宣传内容展示模型的使用价值。",
+          "points": [
+            "梳理MaaS产品能力及不同用户的场景需求",
+            "参与模型测评与行业解决方案/特效宣传视频的制作",
+            "结合特效交付过程，整理流程问题与提效方向"
+          ],
+          "metrics": [
+            {
+              "value": "134",
+              "unit": "款",
+              "label": "特效交付",
+              "note": "海内外同步上线"
+            }
+          ],
+          "tags": [
+            "泛互联网",
+            "AI剧",
+            "广告营销"
+          ],
+          "flow": [
+            "Workflow搭建",
+            "Benchmark评测",
+            "案例登记",
+            "宣传内容制作"
+          ],
+          "media": [
+            {
+              "label": "MaaS产品与客户展示",
+              "kind": "image",
+              "src": "",
+              "url": ""
+            },
+            {
+              "label": "AI特效上线成果展示",
+              "kind": "image",
+              "src": "assets/uploads/1793025956246-bf3261f9.png",
+              "url": ""
+            }
+          ],
+          "links": [
+            {
+              "label": "Vidu官网场景示例中心（特效）",
+              "url": "https://platform.vidu.cn/docs/overview/templates"
+            },
+            {
+              "label": "",
+              "url": ""
+            }
+          ],
+          "solutions": [
+            {
+              "label": "【直播特效】AI直播特效-对外解决方案",
+              "url": "https://shengshu.feishu.cn/wiki/IyADwcnl6i38wikIFDecxMqsnle"
+            },
+            {
+              "label": "【Motion Control】Motion Control玩法介绍",
+              "url": "https://shengshu.feishu.cn/wiki/ZtmtwfceJigp8pkkqNDcwQtwnWe"
+            },
+            {
+              "label": "【音乐MV】一键生成音乐MV解决方案",
+              "url": "https://shengshu.feishu.cn/wiki/N5tmwd2NJivKAnkqSRVcBC2Jnlf"
+            },
+            {
+              "label": "Vidu S1 流式视频生成模型，打造全新数字人体验",
+              "url": "https://shengshu.feishu.cn/wiki/JH80wRjZriNakFk0pQTcp6j5naf"
+            },
+            {
+              "label": "【微调模型介绍】Q3 参考生模型升级(Ad 广告模型)",
+              "url": "https://shengshu.feishu.cn/wiki/LiS1w7PuGiKFSzkKUulcn21cn5g"
+            }
+          ]
+        },
+        {
+          "id": "growth",
+          "title": "增长运营",
+          "description": "面向开发者搭建内容渠道，以图文与视频解释产品使用方式；结合渠道数据和GEO相关研究，调整内容组织与生产流程。",
+          "points": [
+            "研究平台用户与内容调性，搭建开发者账号矩阵。",
+            "围绕Vidu模型、场景与工具制作图文、视频内容。",
+            "通过飞书看板和写作Skill辅助选题、内容生产与跟踪。"
+          ],
+          "metrics": [
+            {
+              "value": "150→35",
+              "unit": "分钟",
+              "label": "单篇图文内容",
+              "note": "自建AI运营工作台，提效4.3倍"
+            }
+          ],
+          "tags": [
+            "开发者内容",
+            "渠道运营",
+            "GEO研究"
+          ],
+          "channels": [
+            {
+              "label": "CSDN",
+              "url": "https://blog.csdn.net/Vidu_API?spm=1000.2115.3001.10640"
+            },
+            {
+              "label": "哔哩哔哩",
+              "url": "https://space.bilibili.com/3546968024418826?spm_id_from=333.1007.0.0"
+            },
+            {
+              "label": "稀土掘金",
+              "url": "https://juejin.cn/user/2046603866155884"
+            },
+            {
+              "label": "公众号【名称：Vidu API开放平台】",
+              "url": ""
+            }
+          ],
+          "media": [
+            {
+              "label": "渠道覆盖与内容成果",
+              "kind": "image",
+              "src": "assets/uploads/1793021207937-bb5d1270.jpg",
+              "url": ""
+            },
+            {
+              "label": "CSDN文章收录社区",
+              "kind": "image",
+              "src": "assets/uploads/1793021499618-9d98bbb2.jpg",
+              "url": ""
+            }
+          ],
+          "links": [
+            {
+              "label": "AI内容运营工作台演示",
+              "url": ""
+            }
+          ],
+          "smallNote": "CSDN收录与内容成果在同一区域展示；社区名称、截图和对应链接待补齐。"
+        },
+        {
+          "id": "campaign",
+          "title": "活动策划",
+          "description": "独立负责“漫剧行业白皮书”的活动呈现与获客链路，完成留资流程、落地页及相关视觉物料，配合媒体联合宣发。",
+          "points": [
+            "参与白皮书封面、内页和活动落地页制作。",
+            "设计留资流程并分发渠道码，承接活动访问。",
+            "整理活动传播与留资结果，区分触达、留资和后续转化。"
+          ],
+          "metrics": [
+            {
+              "value": "52",
+              "unit": "条",
+              "label": "企业留资",
+              "note": "白皮书活动留资记录，不等同于商机或成交数量。"
+            }
+          ],
+          "tags": [
+            "白皮书活动",
+            "媒体联合宣发",
+            "留资链路"
+          ],
+          "media": [
+            {
+              "label": "漫剧白皮书官网页面",
+              "kind": "image",
+              "src": "assets/uploads/1793026627834-c88e9391.png",
+              "url": "https://platform.vidu.cn/whitepaper"
+            },
+            {
+              "label": "媒体联合宣发",
+              "kind": "image",
+              "src": "assets/uploads/1793026967552-6f2063d3.jpg",
+              "url": "https://mp.weixin.qq.com/s/dYnr3-mUOsHd8hHYdIcJHQ"
+            }
+          ],
+          "links": []
+        },
+        {
+          "id": "website",
+          "title": "官网优化",
+          "description": "从企业与开发者的使用路径出发，梳理官网信息呈现和关键体验问题，通过文案、页面和流程建议帮助用户理解产品与接入方式。",
+          "points": [
+            "整理关键用户旅程与体验问题。",
+            "参与国内外Banner文案及页面内容呈现。",
+            "保留优化建议、原型与改版对比，区分建议提出与实际上线结果。"
+          ],
+          "metrics": [],
+          "tags": [
+            "用户旅程",
+            "信息架构",
+            "页面内容"
+          ],
+          "media": [
+            {
+              "label": "用户旅程与关键问题",
+              "kind": "image",
+              "src": "",
+              "url": ""
+            },
+            {
+              "label": "Vidu官网改版前后对比",
+              "kind": "image",
+              "src": "assets/uploads/1793027929625-6d1e8eb0.jpg",
+              "url": ""
+            }
+          ],
+          "links": [
+            {
+              "label": "官网入口",
+              "url": "https://platform.vidu.cn/"
+            },
+            {
+              "label": "",
+              "url": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enlight",
+      "kind": "internship",
+      "name": "光线传媒",
+      "role": "产品运营",
+      "period": "2024.11—2025.02",
+      "summary": "AI工具评测及选型 · 工作流标准化",
+      "intro": "围绕影视宣发场景，参与AI音视频工具的评测选型和创作流程整理，将工具测试与具体的物料制作需求结合。",
+      "context": "业务场景聚焦影视宣发中的AI音视频制作与工具应用。",
+      "modules": [
+        {
+          "id": "evaluation",
+          "title": "AI工具评测及选型",
+          "description": "结合宣发制作需求对比AI工具表现，整理工具信息、评测规则和选型结果，为实际创作提供参考。",
+          "points": [
+            "围绕具体任务整理工具与模型信息。",
+            "通过样例和评分记录比较输出质量与适用场景。",
+            "以表格形式组织测试过程与选型依据。"
+          ],
+          "metrics": [],
+          "tags": [
+            "需求拆解",
+            "工具评测",
+            "选型依据"
+          ],
+          "media": [
+            {
+              "label": "评测规则与选型结果",
+              "kind": "image",
+              "src": "",
+              "url": ""
+            }
+          ],
+          "links": [
+            {
+              "label": "AI工具评测多维表格",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "id": "workflow",
+          "title": "工作流标准化",
+          "description": "将影视宣发中的AI创作步骤整理为可复用流程，结合LoRA训练文档、提示词与代表物料，呈现从需求到成片的工作过程。",
+          "points": [
+            "整理宣发物料制作流程与操作说明。",
+            "记录模型实践、LoRA训练和提示词使用方式。",
+            "按具体技术与任务保留代表物料及最终作品。"
+          ],
+          "metrics": [],
+          "tags": [
+            "影视宣发",
+            "SOP",
+            "LoRA实践"
+          ],
+          "media": [
+            {
+              "label": "LoRA人物一致性训练流程",
+              "kind": "image",
+              "src": "assets/uploads/1793028348415-bf5c6778.jpg",
+              "url": ""
+            },
+            {
+              "label": "部分宣发物料",
+              "kind": "image",
+              "src": "assets/uploads/1793024442660-eead7d2f.jpg",
+              "url": ""
+            },
+            {
+              "label": "",
+              "kind": "video",
+              "src": "",
+              "url": ""
+            }
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "roboparty",
+      "kind": "project",
+      "name": "萝博派对机器人初创公司",
+      "role": "商业化运营",
+      "period": "2025.08—2025.12",
+      "summary": "行业调研 · 竞品分析 · BP制作",
+      "intro": "通过行业研究、竞品分析与BP制作，梳理项目的业务背景、产品价值与商业化路径。",
+      "context": "围绕项目商业化运营与对外价值表达，保留关键判断、本人交付及项目成果。",
+      "modules": [
+        {
+          "id": "commercial",
+          "title": "商业化运营",
+          "description": "项目后续参加 2025“创·在上海”国际创新创业大赛，获团队优胜奖。",
+          "points": [
+            "负责融资BP（商业计划书）全流程制作，",
+            "通过行业调研、竞品分析及创始人访谈，梳理机器人技术架构、产品矩阵与核心卖点，",
+            "并对标机器人头部企业提炼差异化产品定位及商业化路径。"
+          ],
+          "metrics": [],
+          "tags": [
+            "行业调研",
+            "竞品分析",
+            "融资BP（商业计划书）制作"
+          ],
+          "media": [
+            {
+              "label": "关键商业判断与分析依据",
+              "kind": "image",
+              "src": "",
+              "url": ""
+            },
+            {
+              "label": "融资BP（商业计划书）封面",
+              "kind": "image",
+              "src": "assets/uploads/1793024561050-107eab1a.png",
+              "url": ""
+            },
+            {
+              "label": "产品矩阵布局",
+              "kind": "image",
+              "src": "assets/uploads/1793024717896-af2f1e6f.png",
+              "url": ""
+            }
+          ],
+          "links": [
+            {
+              "label": "",
+              "url": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qunar",
+      "kind": "project",
+      "name": "去哪儿旅行官方远程项目",
+      "role": "产品运营",
+      "period": "2024.02—2024.04",
+      "summary": "社媒运营与用户增长 · 关键链路优化",
+      "intro": "围绕公域内容、私信领券与App转化路径，参与内容运营与转化问题分析，将增长内容和用户体验结合。",
+      "context": "去哪儿旅行官方远程项目，围绕内容获客与优惠券转化场景展开。",
+      "modules": [
+        {
+          "id": "social",
+          "title": "社媒运营与用户增长",
+          "description": "围绕用户兴趣与旅行场景组织社媒内容，结合账号表现和代表笔记分析内容触达与用户增长。",
+          "points": [
+            "制作旅行场景相关内容，积累账号运营实践。",
+            "结合代表笔记与账号数据复盘内容表现。",
+            "区分曝光、关注、引流与首单等不同阶段结果。"
+          ],
+          "metrics": [],
+          "tags": [
+            "社媒内容",
+            "用户增长",
+            "内容复盘"
+          ],
+          "media": [
+            {
+              "label": "账号与代表爆款笔记",
+              "kind": "image",
+              "src": "assets/uploads/1793026286134-1b9264f5.png",
+              "url": "https://www.xiaohongshu.com/explore/65d9d8620000000001028b42?xsec_token=ABExkc3SqdWGBqeAQkPgbB2EaWczg5IlcDqHcNoIss4EM=&xsec_source=pc_search"
+            },
+            {
+              "label": "增长漏斗与成果",
+              "kind": "image",
+              "src": "",
+              "url": ""
+            }
+          ],
+          "links": []
+        },
+        {
+          "id": "product",
+          "title": "产品运营",
+          "description": "关注从内容访问到私信领券、App转化的关键路径，围绕用户流失与优惠券展示问题整理优化方向。",
+          "points": [
+            "梳理内容、私信、领券与App转化之间的用户路径。",
+            "结合私信话术与优惠券展示识别转化问题。",
+            "保留优化示意、引流内容和对应结果材料。"
+          ],
+          "metrics": [],
+          "tags": [
+            "转化路径",
+            "优惠券",
+            "用户体验"
+          ],
+          "media": [
+            {
+              "label": "转化问题与优化示意",
+              "kind": "image",
+              "src": "",
+              "url": ""
+            },
+            {
+              "label": "优惠券活动推广与转化引导",
+              "kind": "image",
+              "src": "assets/uploads/1793026469594-33dadcad.png",
+              "url": "https://www.xiaohongshu.com/explore/65e46ea80000000004002bc9?xsec_token=ABRoJepz3MJO5RAvGB2NTMbF2w4KpN0Ocki2BvXl5fQJw=&xsec_source=pc_search"
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "title": "英语能力",
+      "description": "四六级，雅思6.0（阅读7.0，口语6.0），能够阅读英文行业报告及产品文档，支持海外市场调研与日常英文沟通。",
+      "tags": [
+        "IELTS 6.0",
+        "CET-4",
+        "CET-6"
+      ]
+    },
+    {
+      "title": "数据分析与原型设计",
+      "description": "熟练使用Excel、SPSS、Python、SQL等工具，具备问卷调研、用户洞察及运营数据分析能力；\n掌握Figma/Axure原型设计，能够结合数据分析与用户需求开展产品体验优化及PRD撰写。",
+      "tags": [
+        "数据分析",
+        "问卷调研",
+        "用户洞察",
+        "产品原型"
+      ]
+    },
+    {
+      "title": "AI创作与应用",
+      "description": "熟练使用即梦/可灵/Tapnow/LibTV/Lovart/ComfyUI等工具开展AI图像与视频创作，具备LoRA训练经验；掌握Coze、飞书工作流及AI Skill应用，探索内容自动化与运营提效场景。",
+      "tags": [
+        "AI视频创作",
+        "多模态应用",
+        "AI Agent",
+        "自动化工作流"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "id": "happiness",
+      "title": "幸福感侦察报告-H5网页动态交互",
+      "category": "AI创作",
+      "date": "2026-06-08",
+      "description": "参与第18届大广赛阿里云「千问大模型」命题创作，以外星探员侦查地球幸福感为切入点，展现千问在工作、出行与生活场景中的应用价值，作品最终荣获全国二等奖。",
+      "contribution": "主要负责人物IP形象设计、环境场景设定、部分剧情的AI视频生成，以及H5页面交互设计。",
+      "cover": "assets/uploads/1793015384041-fc44b986.png",
+      "url": "",
+      "portfolioPdf": "assets/uploads/portfolios/1793016686274-6105965a.pdf",
+      "portfolioPdfName": "（已压缩）【千问】幸福感侦查报告-作品集.pdf"
+    },
+    {
+      "id": "zisu",
+      "title": "了不起的紫苏",
+      "category": "AI创作",
+      "date": "2026-02-25",
+      "description": "农创头部品牌 “湘野红姐”AI 宣传视频",
+      "contribution": "独立负责AI视频全流程制作，发布5天全网互动量600+，赞评比高达 7:5；\n获百万博主“湘野红姐”亲自评论互动，实现较高的品牌传播裂变",
+      "cover": "assets/uploads/1793016497912-48029660.jpg",
+      "url": "https://www.xiaohongshu.com/explore/6adf348900000000180053a0?xsec_token=ABIJkX5di1wG7In0NgdTQY3PzwhkvZ3ZybC8V8fM8vrpE=&xsec_source=pc_user"
+    },
+    {
+      "id": "gavel",
+      "title": "三声惊堂木",
+      "category": "AI创作",
+      "date": "2025-10-08",
+      "description": "“中式审美+粘土风”的AI古风叙事短片，叙述三个古代英雄的故事",
+      "contribution": "独立负责AI视频全流程制作，全网浏览 1200+，互动100+；\n评论区互动活跃，多位同行主动求取Prompt（提示词）借鉴",
+      "cover": "assets/uploads/1793014200186-03f2dbfa.jpg",
+      "url": "https://www.xiaohongshu.com/explore/69775019000000001a027ed4?xsec_token=AB-LsEQ-BAXy7yYo8mjnGd1RSvWNfPFl4kTrrgLgL9AdE=&xsec_source=pc_user"
+    },
+    {
+      "id": "cities",
+      "title": "看不见的城市",
+      "category": "AI创作",
+      "date": "2025-12-26",
+      "description": "AI视觉实验短片 丨 油画风格化探索",
+      "contribution": "负责 AI 视频剧本策划、部分分镜绘制、所有人物AI 音频生成（elevenlab），以及后期剪辑与音效处理。",
+      "cover": "assets/uploads/1793016452054-f025d227.jpg",
+      "url": "https://www.xiaohongshu.com/explore/6979dd7d000000001a01cf3d?xsec_token=ABdVcREXOPM67DB9nJ9GLQIs3kyzwuyat-aUR8EdjeszQ=&xsec_source=pc_user"
+    }
+  ],
+  "photography": [
+    {
+      "id": "photo-2",
+      "caption": "",
+      "src": "assets/uploads/1793019714550-fb6f1b88.jpg"
+    },
+    {
+      "id": "photo-622bed3b",
+      "caption": "",
+      "src": "assets/uploads/1793022623845-4e893d32.jpg"
+    },
+    {
+      "id": "photo-1",
+      "caption": "",
+      "src": "assets/uploads/1793019708841-348c2a6a.jpg"
+    },
+    {
+      "id": "photo-bfd5e153",
+      "caption": "",
+      "src": "assets/uploads/1793022650886-f4e0e3e1.jpg"
+    },
+    {
+      "id": "photo-3",
+      "caption": "",
+      "src": "assets/uploads/1793019718059-3cee47fa.jpg"
+    },
+    {
+      "id": "photo-139bc567",
+      "caption": "",
+      "src": "assets/uploads/1793022656963-e47e6799.jpg"
+    },
+    {
+      "id": "photo-dcb57676",
+      "caption": "",
+      "src": "assets/uploads/1793020199761-afaee6f7.jpg"
+    }
+  ]
+}

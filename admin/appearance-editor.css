@@ -1,0 +1,25 @@
+body:has(.appearance-editor) #editor-main{max-width:none;padding:30px}
+.edit-section[id^="edit-work-"]{scroll-margin-top:100px}.pdf-help{font-size:11px;color:#9a8aa8;line-height:1.9;margin:0 0 16px}.pdf-edit .upload{background:#fff}.pdf-current{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 0 20px;font-size:11px;color:#84778f}.pdf-current>span{overflow-wrap:anywhere}.pdf-current a{color:#8056c5}.pdf-current .delete{font-size:10px;padding:6px 8px}
+.appearance-editor{display:grid;grid-template-columns:minmax(260px,330px) minmax(0,1fr);gap:24px;align-items:start}
+.appearance-controls .edit-section{padding:20px}
+.style-section-title{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:14px}
+.style-section-title h2{margin:0;font-size:16px}
+.style-section-title button{font-size:10px;padding:6px 8px;white-space:nowrap}
+.style-help{font-size:10px;color:#9a8aa8;line-height:1.9;margin:10px 0 15px}
+.style-field{display:block;margin:0 0 15px;min-width:0}
+.style-field>span{display:block;font-size:11px;color:#7d6b8c;line-height:1.7;margin-bottom:7px}
+.style-field input,.style-field select{width:100%;max-width:100%;padding:9px 10px;font:inherit;font-size:12px;border:1px solid #e6ddf4;border-radius:8px;background:#fefcff;color:#31223d}
+.style-field input[type=color]{height:39px;padding:4px}
+.style-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.type-settings{border-top:1px solid #e6ddf4;padding-top:16px;margin-top:16px}
+.type-settings>summary{font-size:13px;cursor:pointer;color:#8056c5;margin-bottom:16px;line-height:1.8}
+.appearance-preview{position:sticky;top:108px;min-width:0}
+.preview-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.preview-toolbar>strong{font-size:12px;font-weight:500;color:#7c6b8a}
+.preview-toolbar>div{display:flex;align-items:center;gap:6px}
+.preview-toolbar button,.preview-toolbar a{padding:7px 10px;border:1px solid #e6ddf4;border-radius:7px;background:#fff;color:#8b789c;font-size:10px;text-decoration:none}
+.preview-toolbar button.selected{color:#8056c5;border-color:#cab2e7;background:#f2ebfa}
+.preview-window{position:relative;width:100%;overflow:hidden;border:1px solid #e6ddf4;border-radius:16px;background:#fcfbfe}
+.preview-window iframe{position:absolute;top:0;left:0;border:0;max-width:none;transform-origin:top left;background:#fcfbfe}
+@media(max-width:1100px){.appearance-editor{grid-template-columns:minmax(220px,290px) minmax(0,1fr);gap:18px}body:has(.appearance-editor) #editor-main{padding:25px 20px}}
+@media(max-width:900px){.appearance-editor{grid-template-columns:1fr}.appearance-preview{position:relative;top:auto;grid-row:1}.appearance-controls{grid-row:2}.preview-window{max-height:550px}.appearance-controls .edit-section{padding:20px}}
